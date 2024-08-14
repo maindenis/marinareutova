@@ -106,4 +106,18 @@ $(document).ready(function() {
       }
     });
 
+    // ------------
+
+    $('a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
+      var hrefAttr = $(this).attr("href");
+      $(".resp_nav li a").removeClass("active");
+      $(this).addClass("active");
+      if( hrefAttr.length > 0 && hrefAttr != "#" ) {
+          $('html, body').stop().animate({
+              'scrollTop': $(hrefAttr).offset().top+2
+          }, 500);
+      }
+    });
+
 });
