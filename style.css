@@ -879,7 +879,7 @@ textarea:focus {
 
 .article_2 > div:nth-child(1) {
     width: 490px;
-    padding-top: 3px;
+    padding-top: 12px;
 }
 
 .article_2 > div:nth-child(2) {
@@ -894,7 +894,7 @@ textarea:focus {
 .item {
     display: flex;
     align-items: center;
-    margin: 24px 0;
+    padding: 12px 0;
 }
 
 .item:nth-child(1) {
@@ -1040,6 +1040,10 @@ textarea:focus {
     color: #fff;
 }
 
+.thumbnails_2_bg_img {
+    display: none;
+}
+
 .thumbnails_2_wrapp {
     margin-top: 23px;
     padding-bottom: 172px;
@@ -1135,12 +1139,13 @@ textarea:focus {
 
 .thumb_3_wrapp {
     display: flex;
+    position: relative;
 }
 
 .thumb_3_wrapp:nth-child(even) {
     justify-content: flex-end;
     position: relative;
-    right: -40px;
+    right: -115px;
 }
 
 .thumb_3 {
@@ -1204,10 +1209,11 @@ textarea:focus {
 }
 
 .two_cols .img_box {
-    flex: 1;
+    display: flex;
     height: calc(100% - 6px);
     border-radius: 28px;
     position: relative;
+    right: -50px;
     overflow: hidden;
 }
 
@@ -1259,6 +1265,29 @@ textarea:focus {
     box-shadow: 0 0 6px rgba(0, 0, 0, .02), 0 2px 4px rgba(0, 0, 0, .08);
     border-radius: 24px;
     margin: 14px auto;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.price_thumb:hover {
+    background: #EAEAEA;
 }
 
 .price_thumb > div:nth-child(1) {
@@ -1344,7 +1373,7 @@ textarea:focus {
 .dropdown_item_title {
     background: #2E4057;
     border-radius: 14px;
-    padding: 28px 45px 29px 45px;
+    padding: 28px 90px 29px 45px;
     position: relative;
     z-index: 2;
     cursor: pointer;

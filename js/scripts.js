@@ -37,7 +37,8 @@ function  getScrollParams() {
             $(".article_2").removeClass("bootmAlign");
         }
         $(".item").each(function() {
-            if($("#titleCoord").offset().top > $(this).offset().top - 10) {
+            if($("#titleCoord").offset().top > $(this).offset().top - 20 ) {
+                $(this).prev(".item").removeClass("active");
                 $(this).addClass("active");
             } else {
                 $(this).removeClass("active");
@@ -221,12 +222,11 @@ $(document).ready(function() {
     // -------------
 
     $(".item a").on("mouseover", function() {
-        console.log("dsdsd");
         tooltip = $(this).find(".tooltip");
         if(tooltip.offset().left + tooltip.width() > $(window).width()) {
             tooltip.addClass("right");
         } else {
-            tooltip.remoeClass("right");
+            tooltip.removeClass("right");
         }
     });
 

@@ -24,11 +24,84 @@
 
 /*-- /Section 1 - Main Page --*/
 
+/*-- Section 5 - Main Page --*/
+
+.two_cols .img_box {
+    right: 0;
+}
+
+.thumb_3_wrapp:nth-child(even) {
+    right: -43px;
+}
+
+.thumb_3_wrapp:nth-child(2) {
+    margin-top: -23px;
+}
+
+.thumb_3 {
+    width: 450px;
+}
+
+.thumb_3 h3 {
+    font-size: 22px;
+}
+
+.thumb_3 p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.thumb_3_single h3 {
+    font-size: 22px;
+}
+
+.thumb_3_single p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/*-- /Section 5 - Main Page --*/
+
 }
 
 @media only screen and (max-width: 1240px) {
 
+/*-- Section 4 - Main Page --*/
 
+.thumbnails_2_wrapp {
+    padding-bottom: 63px;
+}
+
+.thumb_2_wrapp {
+    padding: 25px 0;
+}
+
+.th_2_bg {
+    max-width: 400px;
+}
+
+.thumb_2 {
+    max-width: 350px;
+    padding: 15px 30px 15px 30px;
+}
+
+.thumb_2 p {
+    font-size: 18px;
+}
+
+/*-- /Section 4 - Main Page --*/
+
+/*-- Section 5 - Main Page --*/
+
+.two_cols > div:nth-child(1) {
+    width: calc(100% - 450px);
+}
+
+.two_cols > div:nth-child(2) {
+    width: 450px;
+}
+
+/*-- /Section 5 - Main Page --*/
 
 }
 
@@ -198,6 +271,59 @@ h2 {
 }
 
 /*-- /Section 3 - Main Page --*/
+
+/*-- Section 5 - Main Page --*/
+
+.sect_5_main {
+    padding: 50px 0 40px 0;
+}
+
+.two_cols > div:nth-child(1) {
+    width: calc(100% - 380px);
+}
+
+.two_cols > div:nth-child(2) {
+    width: 380px;
+}
+
+.thumb_3_wrapp:nth-child(even) {
+        right: -21px;
+}
+
+.thumb_3 {
+    max-width: 283px;
+    padding: 14px 16px 14px 16px;
+    border-radius: 14px;
+}
+
+.thumb_3 h3 {
+    font-size: 18px;
+}
+
+.thumb_3 p {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.thumb_3_single h3 {
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.thumb_3_single p {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+/*-- /Section 5 - Main Page --*/
+
+/*-- Section 6 - Main Page --*/
+
+.price_thumb {
+    padding: 10px 25px 10px 25px;
+}
+
+/*-- /Section 6 - Main Page --*/
 
 }
 
@@ -370,7 +496,7 @@ h1 {
 }
 
 .article_2 {
-    margin: 54px 0 73px 0;
+    margin: 54px 0 64px 0;
 }
 
 .article_2 > div:nth-child(1) {
@@ -388,6 +514,28 @@ h1 {
 }
 
 /*-- /Section 3 - Main Page --*/
+
+/*-- Section 4 - Main Page --*/
+
+.thumb_2 {
+    max-width: 275px;
+}
+
+.thumb_2 p {
+    font-size: 16px;
+}
+
+/*-- /Section 4 - Main Page --*/
+
+/*-- Section 5 - Main Page --*/
+.two_cols > div:nth-child(1) {
+    width: calc(100% - 300px);
+}
+
+.two_cols > div:nth-child(2) {
+    width: 300px;
+}
+/*-- /Section 5 - Main Page --*/
 
 }
 
@@ -503,7 +651,7 @@ h1 {
 /*-- Section 3 - Main Page --*/
 
 .item {
-    margin: 21px 0;
+    padding: 11px 0;
 }
 
 .item > div:nth-child(1) {
@@ -541,6 +689,105 @@ h1 {
 }
 
 /*-- /Section 3 - Main Page --*/
+
+/*-- Section 4 - Main Page --*/
+
+.sect_4_main {
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.thumbnails_2_bg {
+    min-width: 100%;
+    margin: 0 -20px;
+    padding: 18px 0 10px 0;
+    height: 361px;
+    background: #131514;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnails_2_bg_img {
+    display: block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.thumbnails_2_wrapp:before {
+    display: none;
+}
+
+.th_2_bg {
+    display: none;
+}
+
+.thumbnails_2_wrapp {
+    margin-top: 9px;
+    padding-bottom: 63px;
+}
+
+.thumb_2_wrapp {
+    width: 100%;
+    padding: 7px 0;
+}
+
+.thumb_2 {
+    max-width: 345px;
+    padding: 14px 15px 11px 20px;
+}
+
+.thumb_2 p {
+    font-size: 17px;
+}
+
+.thumb_2_wrapp:nth-child(1) {
+    order: 3;
+}
+.thumb_2_wrapp:nth-child(2) {
+    order: 4;
+}
+.thumb_2_wrapp:nth-child(3) {
+    order: 2;
+    justify-content: flex-end;
+}
+.thumb_2_wrapp:nth-child(4) {
+    order: 6;
+}
+.thumb_2_wrapp:nth-child(5) {
+    order: 1;
+}
+.thumb_2_wrapp:nth-child(6) {
+    order: 5;
+    justify-content: flex-start;
+}
+
+/*-- /Section 4 - Main Page --*/
+
+/*-- Section 5 - Main Page --*/
+
+.sect_5_main {
+    padding: 6px 0 40px 0;
+}
+
+.thumb_3_wrapp:nth-child(even) {
+    right: 0;
+}
+
+.two_cols > div:nth-child(1) {
+    width: 100%;
+}
+
+.two_cols > div:nth-child(2) {
+    display: none;
+}
+
+/*-- /Section 5 - Main Page --*/
 
 }
 
