@@ -37,7 +37,7 @@ function  getScrollParams() {
             $(".article_2").removeClass("bootmAlign");
         }
         $(".item").each(function() {
-            if($("#titleCoord").offset().top > $(this).offset().top - 20 ) {
+            if($("#titleCoord").offset().top > $(this).offset().top - 30 ) {
                 $(this).prev(".item").removeClass("active");
                 $(this).addClass("active");
             } else {
