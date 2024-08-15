@@ -340,7 +340,7 @@ textarea:focus {
 /*-------------------------------------------*/
 
 .header_site {
-    width: 100%;
+    width: calc(100% - 50px);
     max-width: 1660px;
     background: radial-gradient(151.64% 120.36% at 47.19% -0.63%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(15.3px);
@@ -426,12 +426,10 @@ textarea:focus {
     /*display: inline-block;*/
     display: none;
     vertical-align: top;
-    width: 26px;
-    height: 26px;
+    width: 48px;
+    height: 48px;
     background: transparent;
     cursor: pointer;
-    position: relative;
-    top: 12px;
     z-index: 11;
     border: 1px solid transparent;
     margin-left: 10px;
@@ -439,12 +437,12 @@ textarea:focus {
 
 .respmenubtn span {
     display: block;
-    width: 24px;
-    height: 2px;
-    background: #1565C0;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    margin: 0 auto 6px auto;
+    width: 39px;
+    height: 4px;
+    background: #252525;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin: 0 auto 8px auto;
     -webkit-transition-property: transform, border, background;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -476,15 +474,14 @@ textarea:focus {
 }
 
 .respmenubtn:hover span {
-    background: #FD8C04;
+    background: #252525;
 }
 
 .respmenubtn.active span {
     position: relative;
-    width: 30px;
+    width: 56px;
     top: 0;
-    left: -2px;
-    background: #FD8C04;
+    left: -6px;
 }
 
 .respmenubtn.active span:last-child {
@@ -498,8 +495,8 @@ textarea:focus {
     transform: rotate(45deg);
     margin: 3px 0 0 0;
     position: relative;
-    top: 2px;
-    left: -2px;
+    top: 4px;
+    left: -5px;
 }
 
 .respmenubtn.active span:nth-child(2) {
@@ -510,6 +507,10 @@ textarea:focus {
 }
 
 /* ----- / Responsive Menu Button ------ */
+
+.resp_header {
+    display: none;
+}
 
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
@@ -530,9 +531,10 @@ textarea:focus {
 
 .promo_content {
     display: flex;
-/*    align-items: center;*/
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
+    z-index: 2;
 }
 
 .promo_descript {
@@ -558,6 +560,7 @@ textarea:focus {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 10px 40px 12px 40px;
     min-height: 69px;
     border: none;
@@ -604,6 +607,10 @@ textarea:focus {
 
 .promo_descript .blue_pill {
     margin: 50px 0 20px 0;
+}
+
+.promo_descript_resp > div:nth-child(2) {
+    display: none;
 }
 
 .promo_footer {
@@ -668,7 +675,7 @@ textarea:focus {
     display: block;
     width: auto;
     height: auto;
-    max-height: 100%;
+    max-height: calc(100% - 200px);
     max-width: 100%;
     position: absolute;
     bottom: 0;
@@ -808,7 +815,16 @@ textarea:focus {
     display: block;
     width: auto;
     height: auto;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.article .img_box.resp {
+    display: none;
 }
 
 .article p {
@@ -853,12 +869,17 @@ textarea:focus {
 .article_2 {
     display: flex;
     flex-wrap: wrap;
-    padding: 66px 0 54px 0;
+    margin: 90px 0 90px 0;
+}
+
+.article_2.bootmAlign > div:nth-child(1) {
+    display: flex;
+    align-items: flex-end;
 }
 
 .article_2 > div:nth-child(1) {
     width: 490px;
-    padding-top: 26px;
+    padding-top: 3px;
 }
 
 .article_2 > div:nth-child(2) {
@@ -874,6 +895,14 @@ textarea:focus {
     display: flex;
     align-items: center;
     margin: 24px 0;
+}
+
+.item:nth-child(1) {
+    margin-top: 0;
+}
+
+.item:last-child {
+    margin-bottom: 0;
 }
 
 .item > div:nth-child(1) {
@@ -910,7 +939,7 @@ textarea:focus {
     transition-timing-function: ease;
 }
 
-.item:hover .num {
+.item.active .num {
     background: #0D3AF0;
 }
 
@@ -978,6 +1007,15 @@ textarea:focus {
 .item > div:nth-child(2) p a:hover .tooltip {
     opacity: 1;
     left: calc(100% - 49px);
+}
+
+.item > div:nth-child(2) p a .tooltip.right {
+    left: auto;
+    right: 99999999px;
+}
+.item > div:nth-child(2) p a:hover .tooltip.right {
+    left: auto;
+    right: 0;
 }
 
 /*-- /Section 3 - Main Page --*/
@@ -1720,3 +1758,37 @@ footer {
     position: relative;
     top: 3px;
 }
+
+/*---------*/
+
+body.fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/*----------*/
+
+.mCSB_dragger {
+    width: 28px !important;
+    height: 28px !important;
+    background: #FFF !important;
+    border-radius: 50% !important;
+    box-shadow: 0 .5px 4px rgba(0, 0, 0, .12), 0 6px 13px rgba(0, 0, 0, .12) !important;
+    top: -12px;
+}
+
+.mCSB_scrollTools {
+    max-width: 363px !important;
+    margin: 10px auto 20px auto !important;
+    opacity: 1 !important;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    margin: 0 !important;
+    height: 4px !important;
+    background: rgba(120, 120, 128, .16) !important;
+}
+
