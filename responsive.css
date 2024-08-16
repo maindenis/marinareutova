@@ -905,22 +905,28 @@ h1 {
 
 .thumb_2_wrapp:nth-child(1) {
     order: 3;
+    transition-delay: 1.5s;
 }
 .thumb_2_wrapp:nth-child(2) {
     order: 4;
+    transition-delay: 2s;
 }
 .thumb_2_wrapp:nth-child(3) {
     order: 2;
+    transition-delay: 1s;
     justify-content: flex-end;
 }
 .thumb_2_wrapp:nth-child(4) {
     order: 6;
+    transition-delay: 3s;
 }
 .thumb_2_wrapp:nth-child(5) {
     order: 1;
+    transition-delay: .5s;
 }
 .thumb_2_wrapp:nth-child(6) {
     order: 5;
+    transition-delay: 2.5s;
     justify-content: flex-start;
 }
 

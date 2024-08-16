@@ -49,6 +49,14 @@ function  getScrollParams() {
     }
 }
 
+function getAnimation() {
+  $(".animate").each(function() {
+    if( $(this).offset().top <= $(document).scrollTop() + $(window).height() ) {
+      $(this).addClass("active");
+    }
+  });
+}
+
 var sections = $('.screen')
   , nav = $('.resp_nav')
   , nav_height = nav.outerHeight();
@@ -64,11 +72,13 @@ $(window).resize(function() {
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
     getScrollbarParams();
     getScrollParams();
+    getAnimation();
 });
 
 $(document).scroll(function() {
     getRespParams();
     getScrollParams();
+    getAnimation();
     var cur_pos = $(this).scrollTop();      
     sections.each(function() {
     var top = $(this).offset().top - nav_height,
@@ -86,6 +96,7 @@ $(document).scroll(function() {
 
 $(window).on('load', function(){
     getScrollbarParams();
+    getAnimation();
 });
 
 $(document).ready(function() {
@@ -170,5 +181,14 @@ $(document).ready(function() {
     // -------------
 
     Fancybox.bind("[data-fancybox]", {});
+
+    // -------------
+
+    var text = $(".prTextTempl").text();
+    var typed = new Typed('#result', {
+      strings: [text],
+      typeSpeed: 30,
+      loop: true
+    });
 
 });
