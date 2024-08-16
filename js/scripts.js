@@ -7,7 +7,7 @@ function getRespParams() {
 }
 
 function getScrollbarParams() {
-    if(bodyWidth <= 900) {
+    if($(window).width() <= 900) {
         $(".thumbs_scroll").mCustomScrollbar({
             axis:"x",
             theme:"rounded"
@@ -72,61 +72,27 @@ $(window).on('load', function(){
 });
 
 $(document).ready(function() {
-
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
     getRespParams();
     getScrollParams();
-
-    if( $(".slider").length > 0 ) {
-        $(".slider").not(".slick-initialized").slick({
-            dots: true,
-            arrows: true,
-            // autoplay: true,
-            autoplaySpeed: 4000,
-            speed: 2000,
-            variableWidth: true,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            centerMode: true,
-            appendDots: $(".slider_dots"),
-            appendArrows: $(".slider_arrows"),
-            // fade: true,
-            responsive: [
-                {
-                  breakpoint: 1125,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                  }
-                },
-                // {
-                //   breakpoint: 540,
-                //   settings: {
-                //     slidesToShow: 1,
-                //     slidesToScroll: 1
-                //   }
-                // }
-              ]
-        });
-    }
-
     // --------------
 
     $(".respmenubtn").click(function(e) {
       e.preventDefault();
-      if( $("#resp_nav").is(":hidden") ) {
-          $("#resp_nav").fadeIn(300);
+      if( $("#respNav").is(":hidden") ) {
+          $("#respNav").fadeIn(300);
           $(this).addClass("active");
       } else {
-          $("#resp_nav").fadeOut(300);
+          $("#respNav").fadeOut(300);
           $(this).removeClass("active");
       }
     });
     
     $(this).keydown(function(eventObject){
         if (eventObject.which == 27 &&
-            $("#resp_nav").is(":visible") &&
+            $("#respNav").is(":visible") &&
             bodyWidth <= 767) {
-                $("#resp_nav").fadeOut(300);
+                $("#respNav").fadeOut(300);
                 $(".respmenubtn").removeClass("active");
         }
     });
@@ -167,56 +133,10 @@ $(document).ready(function() {
               'scrollTop': $(hrefAttr).offset().top+2
           }, 500);
       }
-    });
-
-    // ------------
-
-    $(".respmenubtn").click(function(e) {
-      e.preventDefault();
-      if( $("#respNav").is(":hidden") ) {
-          $("#respNav").fadeIn(300);
-          $(this).addClass("active");
-        div = document.createElement('div');
-        div.style.overflowY = 'scroll';
-        div.style.width = '50px';
-        div.style.height = '50px';
-        div.style.visibility = 'hidden';
-        document.body.appendChild(div);
-        scrollWidth = div.offsetWidth - div.clientWidth;
-        document.body.removeChild(div);
-        topCoord = $(document).scrollTop();
-        $("body").addClass("fixed");
-        $("body").css({
-        "top" :  -1 * topCoord + "px",
-        "padding-right" : scrollWidth + "px"
-        });
-      } else {
-          $("#respNav").fadeOut(300);
-          $(this).removeClass("active");
-        curTop = $("body").css("top");
-        curTop = Math.abs(parseInt(curTop, 10));
-        $("body").removeClass("fixed");
-        if (curTop !== 0) {
-        $("html").scrollTop(curTop);
-        }
-        $("body").attr("style", "");
+      if($(window).width() <= 900) {
+        $("#respNav").fadeOut(300);
+        $(".respmenubtn").removeClass("active");
       }
-    });
-    
-    $(this).keydown(function(eventObject){
-        if (eventObject.which == 27 &&
-            $("#respNav").is(":visible") &&
-            bodyWidth <= 900) {
-                $("#respNav").fadeOut(300);
-                $(".respmenubtn").removeClass("active");
-                curTop = $("body").css("top");
-                curTop = Math.abs(parseInt(curTop, 10));
-                $("body").removeClass("fixed");
-                if (curTop !== 0) {
-                $("html").scrollTop(curTop);
-                }
-                $("body").attr("style", "");
-        }
     });
 
     // -------------
@@ -229,7 +149,5 @@ $(document).ready(function() {
             tooltip.removeClass("right");
         }
     });
-
-
 
 });
