@@ -48,7 +48,7 @@
 
 .thumb_3 p {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 30px;
 }
 
 .thumb_3_single h3 {
@@ -604,6 +604,15 @@ h1 {
 
 /*-- /Section 3 - Main Page --*/
 
+/*-- Section 6 - Main Page --*/
+
+.price_thumb > div:nth-child(1) p {
+    font-size: 28px;
+    line-height: 34px;
+}
+
+/*-- /Section 6 - Main Page --*/
+
 /*-- Section 7 - Main Page --*/
 
 .sect_7_main {
@@ -960,11 +969,6 @@ h1 {
     align-items: flex-start;
     padding: 41px 25px 30px 25px;
     margin: 10px auto;
-}
-
-.price_thumb > div:nth-child(1) p {
-    font-size: 28px;
-    line-height: 34px;
 }
 
 .price_thumb > div:nth-child(1) {
