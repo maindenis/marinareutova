@@ -21,7 +21,7 @@ function getScrollbarParams() {
 function  getScrollParams() {
     if(bodyWidth > 900) {
         articleCoord = $(".article_2").offset().top;
-        documentScroll = $(".header_site").offset().top + $(".header_site").outerHeight();
+        documentScroll = $(".header_site").offset().top + ($(window).height() / 2);
         if(articleCoord < documentScroll) {
             $("#titleCoord").offset({top: documentScroll});
         } else {
@@ -29,7 +29,7 @@ function  getScrollParams() {
             $("#titleCoord").offset({top: false});
             $("#titleCoord").attr("style", "");  
         }
-        if(documentScroll > articleCoord + $(".article_2").height()) {
+        if(documentScroll > articleCoord + $(".article_2").height() - 55) {
             $(".article_2").addClass("bootmAlign");
             $("#titleCoord").offset({top: false});
             $("#titleCoord").attr("style", "");        
