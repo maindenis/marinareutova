@@ -158,7 +158,7 @@ $(document).ready(function() {
       $(this).addClass("active");
       if( hrefAttr.length > 0 && hrefAttr != "#" ) {
           $('html, body').stop().animate({
-              'scrollTop': $(hrefAttr).offset().top-$(".header_site").height()
+              'scrollTop': $(hrefAttr).offset().top-$(".header_site").height()+20
           }, 500);
       }
       if($(window).width() <= 900) {
@@ -187,7 +187,7 @@ $(document).ready(function() {
     var text = $(".prTextTempl").text();
     var typed = new Typed('#resultText', {
       strings: [text],
-      typeSpeed: 100,
+      typeSpeed: 40,
     });
 
 });
