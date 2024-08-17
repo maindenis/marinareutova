@@ -877,6 +877,10 @@ textarea:focus {
     padding: 0 0 0 10px;
 }
 
+#titleCoord {
+    padding-bottom: 15px;
+}
+
 .item {
     display: flex;
     align-items: center;
@@ -1213,7 +1217,7 @@ textarea:focus {
 
 .thumb_3_single p {
     padding: 7px 0;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 24px;
     line-height: 31px;
     color: #252525;

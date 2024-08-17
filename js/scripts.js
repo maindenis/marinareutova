@@ -21,7 +21,7 @@ function getScrollbarParams() {
 function  getScrollParams() {
     if(bodyWidth > 900) {
         articleCoord = $(".article_2").offset().top;
-        documentScroll = $(".header_site").offset().top + ($(window).height() / 2);
+        documentScroll = $(".header_site").offset().top + ($(window).height() / 2) - $("#titleCoord").height() - 30;
         if(articleCoord < documentScroll) {
             $("#titleCoord").offset({top: documentScroll});
         } else {
@@ -29,7 +29,7 @@ function  getScrollParams() {
             $("#titleCoord").offset({top: false});
             $("#titleCoord").attr("style", "");  
         }
-        if(documentScroll > articleCoord + $(".article_2").height() - 55) {
+        if(documentScroll > articleCoord + $(".article_2").height() - $("#titleCoord").height()) {
             $(".article_2").addClass("bootmAlign");
             $("#titleCoord").offset({top: false});
             $("#titleCoord").attr("style", "");        
@@ -158,7 +158,7 @@ $(document).ready(function() {
       $(this).addClass("active");
       if( hrefAttr.length > 0 && hrefAttr != "#" ) {
           $('html, body').stop().animate({
-              'scrollTop': $(hrefAttr).offset().top-$(".header_site").outerHeight()
+              'scrollTop': $(hrefAttr).offset().top-$(".header_site").height()
           }, 500);
       }
       if($(window).width() <= 900) {
@@ -185,10 +185,9 @@ $(document).ready(function() {
     // -------------
 
     var text = $(".prTextTempl").text();
-    var typed = new Typed('#result', {
+    var typed = new Typed('#resultText', {
       strings: [text],
-      typeSpeed: 30,
-      loop: true
+      typeSpeed: 100,
     });
 
 });
