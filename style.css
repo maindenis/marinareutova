@@ -1480,6 +1480,20 @@ textarea:focus {
     color: #252525;
 }
 
+.dropdown_item_content h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: #252525;
+}
+
+.dropdown_item_content ul li {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: #252525;
+}
+
 /*-- /Section 7 - Main Page --*/
 
 /*-- Section 8 - Main Page --*/

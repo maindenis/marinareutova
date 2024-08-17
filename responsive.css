@@ -649,6 +649,16 @@ h1 {
     line-height: 24px;
 }
 
+.dropdown_item_content h4 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.dropdown_item_content ul li {
+    font-size: 20px;
+    line-height: 24px;
+}
+
 /*-- /Section 7 - Main Page --*/
 
 /*-- Section 8 - Main Page --*/
