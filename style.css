@@ -778,9 +778,15 @@ textarea:focus {
 
 /*-- Section 3 - Main Page --*/
 
+.screenAbout {
+    height: 20px;
+    position: relative;
+    top: -40px;
+}
+
 .article {
     display: flex;
-    padding: 13px 0 13px 0;
+    padding: 0 0 13px 0;
 }
 
 .article > div:nth-child(1) {
@@ -856,10 +862,14 @@ textarea:focus {
     border-bottom: 2px solid transparent;
 }
 
+.screenHow {
+    height: 20px;
+}
+
 .article_2 {
     display: flex;
     flex-wrap: wrap;
-    margin: 90px 0 90px 0;
+    margin: 70px 0 90px 0;
 }
 
 .article_2.bootmAlign > div:nth-child(1) {
@@ -2053,4 +2063,8 @@ body.fixed {
 }
 
 /*-- /Animation --*/
+
+.typed-cursor {
+    opacity: 0 !important;
+}
 
